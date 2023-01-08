@@ -26,7 +26,7 @@ From this link - https://get.docker.com/
 
 # To Stop running container
 
-`docker stop container id`
+`docker stop container_id`
 
 # To check the stopped container
 
