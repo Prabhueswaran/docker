@@ -49,7 +49,8 @@ From this link - https://get.docker.com/
  
  `FROM nginx:latest
   COPY index.html /usr/share/nginx/html/
- `
+`
+
  Save the file
  
  **Step3:** Build the Docker image
