@@ -19,12 +19,20 @@ From this link - https://get.docker.com/
 
 ### Run the container with ditached mode
 
-`docker container run -p 80:80 --name my_container nginx:latest`
+`docker container run -d -p 80:80 --name my_container nginx:latest`
 
 # To check the running Container 
 
 `docker ps`
 
-## To check the stopped container
+# To Stop running container
+
+`docker stop container id`
+
+# To check the stopped container
 
  `docker ps -a`
+ 
+ # To kill the stopped container 
+ 
+ `docker rm container_id`
