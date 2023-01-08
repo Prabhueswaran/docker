@@ -35,3 +35,37 @@ From this link - https://get.docker.com/
  # To kill the stopped container 
  
  `docker rm container_id`
+ 
+ 
+ # To run custom docker container 
+ 
+ **Step1:** Create own source code 
+ 
+ `echo "Devops class" > index.html`
+ 
+ **Step2:** Create Dockerfile
+
+ `vim Dockerfile`
+ 
+ `FROM nginx:latest
+  COPY index.html /usr/share/nginx/html/
+ `
+ Save the file
+ 
+ **Step3:** Build the Docker image
+ 
+ `docker build -f Dockerfile -t my_custom_image .`
+ 
+ **Step4:** check the custom image which we created
+ 
+ `docker image ls`
+ 
+ **Step5:** Run the docker container with custom image
+ 
+ `docker container run -d -p 82:80 --name my_custom_container my_custom_image`
+ 
+ **Step6:** check the running container 
+ 
+ `docker ps`
+ 
+ Verify the custom application with IP and port number on browser
