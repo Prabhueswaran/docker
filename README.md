@@ -74,5 +74,8 @@ From this link - https://get.docker.com/
  # Docker Volume
  
  To mount host volume to container volume
+ 
  `docker container run -d -p 81:80 -v /home/ubuntu/web_data:/usr/share/nginx/html/ --name my_custom_container nginx`
+ 
+ 
  
