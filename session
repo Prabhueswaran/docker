@@ -1,0 +1,54 @@
+  curl -fsSL https://get.docker.com -o get-docker.sh
+    2  sh get-docker.sh
+    3  sudo usermod -aG docker ubuntu
+    5  docker pull nginx
+    6  docker container run -p 80:80 nginx:latest nginx_container
+    7  docker container run -p 80:80 nginx:latest
+    8  docker ps
+    9  docker ps -a
+   10  docker rm 15534445f75d 0c8b00ce2617
+   11  docker ps -a
+   12  docker container run -d -p 80:80 nginx:latest --name devops1
+   13  docker ps
+   14  docker ps -a
+   15  docker logs 30706c762d67
+   16  docker container run -d -p 80:80 nginx:latest devops1
+   17  docker ps -a
+   18  docker logs a73
+   19  docker rm a73 30
+   20  docker ps -a
+   21  docker container run -d -p 80:80 --name devops1 nginx:latest
+   22  docker ps
+   28  docker build -f Dockerfile -t myimage:v1 .
+   29  docker image ls
+   30  docker ps
+   31  docker container run -d -p 81:80 --name devops2 myimage:v1
+   32  docker ps
+   33  docker rm b8
+   34  docker stop b8
+   35  docker ps -a
+   36  docker start b8
+   37  docker ps -a
+   38  docker stop b8
+   39  docker rm b8
+   40  docker ps -a
+   44  docker container run -d -p 81:80 -v ./web-data:/usr/share/nginx/html/ --name devops2 myimage:v1
+   45  docker container run -d -p 80:80 -v ./web-data:/usr/share/nginx/html/ --name devops3 myimage:v1
+   46  docker ps
+   55  docker container run -d -p 3306:3306 -v ./db-data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=test --name mysql mysql
+   56  docker ps
+   62  docker ps
+   63  docker stop mysql
+   64  docker rm mysql
+   66  docker ps
+   72  docker container run -d -p 3306:3306 -v ./db-data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=test --name mysql mysql
+   74  docker ps
+   75  docker log mysql
+   76  docker logs mysql
+   77  docker logs -f mysql
+   79  docker ps
+   80  docker exec -it devops2
+   81  docker exec -it devops2 /bin/bash
+   82  docker exec -it mysql /bin/bash
+   83  docker ps
+   84  docker inspect devops3
