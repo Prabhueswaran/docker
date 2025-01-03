@@ -8,6 +8,8 @@ From this link - https://get.docker.com/
 
 `sh get-docker.sh`
 
+`sudo usermod -aG docker ubuntu`
+
 # To pull the docker image from docker Hub 
 
 `docker pull nginx`
